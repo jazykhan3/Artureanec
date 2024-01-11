@@ -87,7 +87,7 @@ function Services() {
           src={serviceBg}
           alt="_bg"
         />
-        <div className="bg-transparent md:bg-[#785445] flex flex-row gap-16 lg:gap-[200px] justify-center px-4 sm:px-3 md:px-24 py-6">
+        <div className="bg-transparent md:bg-[#785445] flex flex-row gap-8 lg:gap-[200px] justify-center px-3 md:px-24 py-6">
           {serviceIcon.map((item, index) => (
             <div
               key={index}
@@ -128,7 +128,7 @@ function Services() {
               {serviceList1.map((item, index) => (
                 <div
                   key={index}
-                  className="md:w-[407px] w-[12rem] mb-12  md:mb-0 flex flex-col justify-center items-center"
+                  className="md:w-[407px] w-[11rem] mb-12  md:mb-0 flex flex-col justify-center items-center"
                 >
                   <img
                     className="hidden md:block  w-[195px] h-[200px] md:w-[407px] md:h-[396px] rounded-md"

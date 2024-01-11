@@ -68,7 +68,7 @@ function Products() {
             </div>
           </div>
           <div
-            className="xl:rounded-tr-[20px] flex-wrap md:flex-wrap rounded-bl-[20px] xl:rounded-bl-[0px] rounded-br-[20px] w-full xl:w-[70%] 2xl:w-[65%] bg-[#EDEBE4] flex flex-row gap-3 md:gap-12 lg:gap-4 py-10 md:py-20 xl:py-0 md:px-12 px-3  justify-center items-center bg-no-repeat bg-cover"
+            className="xl:rounded-tr-[20px] flex-wrap md:flex-wrap rounded-bl-[20px] xl:rounded-bl-[0px] rounded-br-[20px] w-full xl:w-[70%] 2xl:w-[65%] bg-[#EDEBE4] flex flex-row gap-2 md:gap-12 lg:gap-4 py-10 md:py-20 xl:py-0 md:px-12   justify-center items-center bg-no-repeat bg-cover"
             style={{ backgroundImage: `url(${productBg2})` }}
           >
             {products.map((item, index) => (

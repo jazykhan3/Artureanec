@@ -70,7 +70,7 @@ function InTouch() {
         </div>
         <div className="flex flex-col relative w-[90%]">
           <div className="flex flex-col lg:flex-row">
-            <div className="w-full lg:w-[70%] bg-[#EDEBE4] pb-[18rem] md:pb-0 rounded-[20px] lg:rounded-tr-[0px] lg:rounded-br-[0px] flex flex-col gap-16 p-5 md:p-20 lg:pr-[200px] xl:pr-[300px]">
+            <div className="w-full lg:w-[70%] bg-[#EDEBE4] pb-[10rem] md:pb-0 rounded-[20px] lg:rounded-tr-[0px] lg:rounded-br-[0px] flex flex-col gap-16 p-3 md:p-20 lg:pr-[200px] xl:pr-[300px]">
               <div className="flex flex-col gap-8">
                 <div className="flex flex-col gap-3">
                   <p className="text-[#232323] text-2xl md:text-[47px] fontAbril font-medium leading-normal ">
@@ -116,7 +116,7 @@ function InTouch() {
                   </button>
                 </div>
               </div>
-              <div className="flex gap-2 md:gap-10 justify-start flex-wrap items-center pb-20 ">
+              <div className="flex gap-1 md:gap-10 justify-start flex-wrap items-center pb-20 ">
                 <div className="flex gap-3 justify-start items-center">
                   <img src={phoneIcon} className="md:hidden" width={20} height={20} alt="_phone" />
                   <img src={phoneIcon} className="hidden md:block" alt="_phone" />
