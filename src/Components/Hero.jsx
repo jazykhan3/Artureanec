@@ -9,7 +9,7 @@ function Hero() {
     <>
       <div
         id="heroSection"
-        className="bg-[#DDDAD2] flex flex-col flex-col-reverse lg:flex-row gap-16 lg:gap-10 xl:gap-40 overflow-hidden pt-40 mt-[-137px] bg-cover bg-no-repeat"
+        className="bg-[#DDDAD2] flex flex-col flex-col-reverse lg:flex-row gap-16 lg:gap-10 xl:gap-40 overflow-hidden pt-36 md:pt-40 mt-[-137px] bg-cover bg-no-repeat"
         style={{ backgroundImage: `url(${lineBg})` }}
       >
         <div className="absolute hidden md:flex w-full justify-end">
@@ -48,7 +48,7 @@ function Hero() {
             </p>
             <button
               onClick={() => console.log("Get Your Appointment Clicked!")}
-              className="flex mt-4   hover:shadow-md hover:bg-white hover:text-[#2E4630] text-white text-xs md:text-lg font-normal md:font-light font-quicksand leading-normal bg-[#2E4630] rounded-tr-[30px] rounded-bl-[30px] py-4 px-6"
+              className="flex mt-4   hover:shadow-md hover:bg-white hover:text-[#2E4630] text-white text-xs md:text-lg font-normal md:font-light font-quicksand leading-normal bg-[#2E4630] rounded-tr-[30px] rounded-bl-[30px] py-4 px-4 md:px-6"
             >
               get your appointment
             </button>

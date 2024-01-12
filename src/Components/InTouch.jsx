@@ -8,6 +8,8 @@ import bg2 from "../Assets/touch-bg-2.svg";
 import bg3 from "../Assets/touch-bg-3.svg";
 import bg4 from "../Assets/touch-bg-4.svg";
 import bg5 from "../Assets/touch-bg-5.svg";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function InTouch() {
   const [formData, setFormData] = useState({
@@ -17,12 +19,14 @@ function InTouch() {
     message: "",
   });
 
+  const [formErrors, setFormErrors] = useState({});
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormErrors({ ...formErrors, [e.target.name]: "" });
   };
 
   const sendEmail = () => {
-    // Replace with your EmailJS User ID and Template ID
     const userID = "Dnj-vts8njFl-GGau";
     const templateID = "template_vy3qry6";
 
@@ -30,39 +34,65 @@ function InTouch() {
       from_name: formData.name,
       email: formData.email,
       phone: formData.phone,
-      to_name:'jazykah13@gmail.com',
+      to_name: "Danielbarenboim",
       message: formData.message,
     };
 
-    emailjs.send("service_utv8hcv", templateID, templateParams, userID).then(
-      (response) => {
-        console.log("Email sent successfully:", response);
-        // You can add additional logic here after the email is sent successfully
-      },
-      (error) => {
-        console.error("Email could not be sent:", error);
-        // You can add error handling logic here
-      }
-    );
+    return emailjs.send("service_utv8hcv", templateID, templateParams, userID);
   };
 
-  const handleSubmit = async(e) => {
+  const validateForm = () => {
+    let errors = {};
+    let isValid = true;
+
+    if (!formData.name.trim()) {
+      errors.name = "Name is required";
+      isValid = false;
+    }
+
+    if (!formData.phone.trim()) {
+      errors.phone = "Phone number is required";
+      isValid = false;
+    }
+    
+    if (!formData.email.trim()) {
+      errors.email = "Email is required";
+      isValid = false;
+    }
+    if (!formData.message.trim()) {
+      errors.message = "Message is required";
+      isValid = false;
+    }
+    setFormErrors(errors);
+    return isValid;
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Your existing form handling logic goes here
+    if (!validateForm()) {
+      return;
+    }
 
-    // Call sendEmail function to send the email
-  await  sendEmail();
-  setFormData({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  })
+    try {
+      await sendEmail();
+      toast.success("Mail sent successfully!");
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Email could not be sent:", error);
+    }
   };
+
 
   return (
     <>
+    <ToastContainer />
       <div id="inTouchSection" className="flex justify-center items-center py-10 y md:py-40 px-4 sm:px-6 md:px-8 lg:px-24">
         <div className="absolute flex justify-between w-full mt-[-1431px] lg:mt-[-714px]">
           <img className="opacity-[0.9]" src={bg1} alt="_bg" />
@@ -87,27 +117,39 @@ function InTouch() {
                     className="z-10 border border-[#DFD8CA] rounded-[10px] py-3 px-4 bg-transparent"
                     onChange={handleChange}
                     name="name"
-                  />
+                    value={formData.name}                  />
+                                {formErrors.name && <p className="text-red-500">{formErrors.name}</p>}
+
                   <input
                     type="email"
                     placeholder="Email"
                     className="z-10 border border-[#DFD8CA] rounded-[10px] py-3 px-4 bg-transparent"
                     onChange={handleChange}
                     name="email"
-                  />
+                    value={formData.email}                     />
+                                {formErrors.email && <p className="text-red-500">{formErrors.email}</p>}
+
                   <input
                     type="tel"
                     placeholder="Phone number*"
                     className=" z-10 border border-[#DFD8CA] rounded-[10px] py-3 px-4 bg-transparent"
                     onChange={handleChange}
                     name="phone"
+                    value={formData.phone}                   
+
                   />
+                              {formErrors.phone && <p className="text-red-500">{formErrors.phone}</p>}
+
                   <textarea
                     placeholder="Message"
                     className="z-10 border border-[#DFD8CA] rounded-[10px] py-3 px-4 bg-transparent h-[152px]"
                     onChange={handleChange}
                     name="message"
+                    value={formData.message}                    
+
                   />
+                              {formErrors.message && <p className="text-red-500">{formErrors.message}</p>}
+
                   <button
                     onClick={handleSubmit}
                     className="z-10 rounded-full cursor-pointer text-white bg-[#2E4630] p-3 fontQuicksand text-xs md:text-sm leading-normal hover:shadow-md cursor-pointer"
@@ -118,37 +160,37 @@ function InTouch() {
               </div>
               <div className="flex gap-1 md:gap-10 justify-start flex-wrap items-center pb-20 ">
                 <div className="flex gap-3 justify-start items-center">
-                  <img src={phoneIcon} className="md:hidden" width={20} height={20} alt="_phone" />
+                  <img src={phoneIcon} className="md:hidden" width={16} height={16} alt="_phone" />
                   <img src={phoneIcon} className="hidden md:block" alt="_phone" />
                   <div className="fex flex-col gap-1">
-                    <p className="fontMont font-medium text-[10px] md:text-sm leading-normal text-[#2E4630]">
+                    <p className="fontMont font-medium text-[9px] md:text-sm leading-normal text-[#2E4630]">
                       Phone
                     </p>
-                    <p className="fontMont text-[10px] md:text-sm leading-normal text-[#666]">
+                    <p className="fontMont text-[9px] md:text-sm leading-normal text-[#666]">
                       03 5432 1234
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-3 justify-start items-center">
-                  <img src={locationIcon} className="md:hidden" width={20} height={20} alt="_location" />
+                  <img src={locationIcon} className="md:hidden" width={16} height={16} alt="_location" />
                   <img src={locationIcon} className="hidden md:block" alt="_location" />
                   <div className="fex flex-col gap-1">
-                    <p className="fontMont font-medium text-[10px] md:text-sm leading-normal text-[#2E4630]">
+                    <p className="fontMont font-medium text-[9px] md:text-sm leading-normal text-[#2E4630]">
                       Location
                     </p>
-                    <p className="fontMont text-[10px] md:text-sm leading-normal text-[#666]">
+                    <p className="fontMont text-[9px] md:text-sm leading-normal text-[#666]">
                       03 5432 1234
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-3 justify-start items-center">
-                  <img src={mailIcon} className="md:hidden" width={20} height={20} alt="_email" />
+                  <img src={mailIcon} className="md:hidden" width={16} height={16} alt="_email" />
                   <img src={mailIcon} className="hidden md:block" alt="_email" />
                   <div className="fex flex-col gap-1">
-                    <p className="fontMont font-medium text-[10px] md:text-sm leading-normal text-[#2E4630]">
+                    <p className="fontMont font-medium text-[9px] md:text-sm leading-normal text-[#2E4630]">
                       Email
                     </p>
-                    <p className="fontMont text-[10px] md:text-sm leading-normal text-[#666]">
+                    <p className="fontMont text-[9px] md:text-sm leading-normal text-[#666]">
                       info@marcc.com.au
                     </p>
                   </div>

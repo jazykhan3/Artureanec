@@ -91,7 +91,7 @@ function Services() {
           {serviceIcon.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col gap-5 justify-center items-center"
+              className="flex flex-col gap-2 md:gap-5 justify-center items-center"
             >
               <img
                 src={item.img}
@@ -107,9 +107,9 @@ function Services() {
             </div>
           ))}
         </div>
-        <div className="bg-transparent md:bg-white pt-[2rem] md:pt-40 px-3 sm:px-6 md:px-8 lg:px-24 flex flex-col gap-16 justify-center items-center">
+        <div className="bg-transparent md:bg-white  md:pt-40 px-3 sm:px-6 md:px-8 lg:px-24 flex flex-col gap-10 md:gap-16 justify-center items-center">
           <div className="flex flex-col gap-8 justify-center items-center z-[1]">
-            <div className="flex flex-col gap-5 justify-center items-center">
+            <div className="flex flex-col gap-2 md:gap-5 justify-center items-center">
               <p className="text-[#232323] fontQuicksand text-base md:text-2xl font-semi-bold md:font-medium leading-normal">
                 Services
               </p>
@@ -128,7 +128,7 @@ function Services() {
               {serviceList1.map((item, index) => (
                 <div
                   key={index}
-                  className="md:w-[407px] w-[11rem] mb-12  md:mb-0 flex flex-col justify-center items-center"
+                  className="md:w-[407px] w-[10rem] mb-12  md:mb-0 flex flex-col justify-center items-center"
                 >
                   <img
                     className="hidden md:block  w-[195px] h-[200px] md:w-[407px] md:h-[396px] rounded-md"
@@ -145,18 +145,18 @@ function Services() {
                     <div
                       className={`flex flex-col gap-3 justify-center items-center 
                         bg-white text-black
-                       rounded-md px-5 py-6 pb-12`}
+                       rounded-md mx-3 px-2 md:px-5 py-6 pb-12`}
                     >
                       <p
                         className={`text-[#2E4630]
-                          fontQuicksand text-[20px] leading-normal`}
+                          fontQuicksand text-base md:text-[20px] leading-normal`}
                       >
                         {item.heading}
                       </p>
                       <p
                         className={`
                          text-[#666]
-                         fontQuicksand text-base leading-normal text-center`}
+                         fontQuicksand text-xs md:text-base leading-normal text-center`}
                         style={textStyle}
                       >
                         {item.description}
@@ -165,9 +165,9 @@ function Services() {
                     <button
       onClick={() => navigate(`/services/${item.heading.toLowerCase().replace(/\s+/g, "-")}`)}
       className={`w-fit flex  text-white
-                    text-lg font-quicksand leading-normal
+                    text-base md:text-lg font-quicksand leading-normal
                          bg-[#2E4630]
-                      rounded-tr-[30px] rounded-bl-[30px] py-4 px-6 mt-[-34px] hover:shadow-lg hover:font-bold`}
+                      rounded-tr-[30px] rounded-bl-[30px] py-2 md:py-4 px-3 md:px-6 mt-[-34px] hover:shadow-lg hover:font-bold`}
                     >
                       Read More
                     </button>
