@@ -9,7 +9,7 @@ function Hero() {
     <>
       <div
         id="heroSection"
-        className="bg-[#DDDAD2] flex flex-col flex-col-reverse lg:flex-row gap-16 lg:gap-10 xl:gap-40 overflow-hidden pt-36 md:pt-40 mt-[-137px] bg-cover bg-no-repeat"
+        className="bg-[#DDDAD2] flex flex-col flex-col-reverse lg:flex-row gap-16 lg:gap-10 xl:gap-40 overflow-hidden pt-36 md:pt-40 mt-[-150px] md:mt-[-137px] bg-cover bg-no-repeat"
         style={{ backgroundImage: `url(${lineBg})` }}
       >
         <div className="absolute hidden md:flex w-full justify-end">

@@ -87,7 +87,7 @@ function Services() {
           src={serviceBg}
           alt="_bg"
         />
-        <div className="bg-transparent md:bg-[#785445] flex flex-row gap-8 lg:gap-[200px] justify-center px-3 md:px-24 py-6">
+        <div className="bg-transparent md:bg-[#785445] flex flex-row gap-4 lg:gap-[200px] justify-center px-3 md:px-24 py-3 md:py-6">
           {serviceIcon.map((item, index) => (
             <div
               key={index}
@@ -107,8 +107,8 @@ function Services() {
             </div>
           ))}
         </div>
-        <div className="bg-transparent md:bg-white  md:pt-40 px-3 sm:px-6 md:px-8 lg:px-24 flex flex-col gap-10 md:gap-16 justify-center items-center">
-          <div className="flex flex-col gap-8 justify-center items-center z-[1]">
+        <div className="bg-transparent md:bg-white  md:pt-40 px-3 sm:px-6 md:px-8 lg:px-24 flex flex-col gap-6 md:gap-16 justify-center items-center">
+          <div className="flex flex-col gap-4 justify-center items-center z-[1]">
             <div className="flex flex-col gap-2 md:gap-5 justify-center items-center">
               <p className="text-[#232323] fontQuicksand text-base md:text-2xl font-semi-bold md:font-medium leading-normal">
                 Services
@@ -145,7 +145,7 @@ function Services() {
                     <div
                       className={`flex flex-col gap-3 justify-center items-center 
                         bg-white text-black
-                       rounded-md mx-3 px-2 md:px-5 py-6 pb-12`}
+                       rounded-md mx-3 px-2 md:px-5 py-3 md:py-6 pb-12`}
                     >
                       <p
                         className={`text-[#2E4630]
