@@ -124,7 +124,7 @@ function Services() {
             </p>
           </div>
           <div className="flex flex-row flex-wrap  md:flex-col gap-0 md:gap-20 justify-center items-center w-full">
-            <div className="flex justify-between flex-wrap  flex-row  xl:flex-row gap-0  md:gap-10 w-full">
+            <div className="flex justify-between flex-wrap  flex-row  xl:flex-row gap-0  md:gap-12 2xl:gap-40 w-full">
               {serviceList1.map((item, index) => (
                 <div
                   key={index}
