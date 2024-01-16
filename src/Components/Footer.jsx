@@ -10,14 +10,17 @@ import bg from "../Assets/footer-bg.svg";
 import logo from "../Assets/logo.svg";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-const Testimonial = ({ text }) => (
+const Testimonial = ({ text, name }) => (
   <div className="px-12 md:px-20">
     <p className="text-[#666] fontQuicksand text-sm md:text-[25px] leading-normal text-center">
       {text}
     </p>
+      <img src={rating} alt={name} className="w-12 h-12 my-5 rounded-full mr-3" />
+      <p className="tetx-[#232323] fontQuicksand text-sm md:text-[20px] leading-normal font-bold">
+                {name}
+      </p>
   </div>
 );
-
 function Footer() {
   const socialIcons = [twitter, li, insta, fb];
 
@@ -28,20 +31,16 @@ function Footer() {
           <img src={bg} alt="_bg" />
         </div>
         <div className="flex gap-6 justify-between items-center border border-[#2E4630] rounded-[20px] shadow-md px-5 pb-4">
-          <div className="flex flex-col gap-3 justify-center items-center">
-            <p className="text-[#2E4630] fontAbril text-xl md:text-[40px] font-medium leading-normal px-4 mt-[-16px] md:mt-[-34px] bg-[#DDDAD2] sm:px-5 text-center">
-              What Our Clients Say
-            </p>
-            <Carousel className="w-[300px] my-[-20px] md:my-0 sm:w-[580px] md:w-[728px] lg:w-[950px] xl:w-auto">
-              <Testimonial text="1 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." />
-              <Testimonial text="2 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." />
-              <Testimonial text="3 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." />
-            </Carousel>
-            <img src={rating} alt="_rating" />
-            <p className="tetx-[#232323] fontQuicksand text-sm md:text-[20px] leading-normal font-medium">
-              Kathryn Murphy
-            </p>
-          </div>
+        <div className="flex flex-col gap-3 justify-center items-center">
+  <p className="text-[#2E4630] fontAbril text-xl md:text-[40px] font-medium leading-normal px-4 mt-[-16px] md:mt-[-34px] bg-[#DDDAD2] sm:px-5 text-center">
+    What Our Clients Say
+  </p>
+  <Carousel className="w-[300px] my-[-20px] md:my-0 sm:w-[580px] md:w-[728px] lg:w-[950px] xl:w-auto">
+    <Testimonial text="1 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." name="John Doe" />
+    <Testimonial text="2 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." name="Kyle Olive"  />
+    <Testimonial text="3 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." name="Bob Smith" />
+  </Carousel>
+</div>
         </div>
         <div className="border-t border-[#2E4630]  flex flex-col justify-between  pt-3 pb-6 w-full">
           <div className="flex gap-2 justify-between mb-3">

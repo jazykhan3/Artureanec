@@ -91,7 +91,7 @@ function Services() {
           {serviceIcon.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col gap-2 md:gap-5 justify-center items-center"
+              className="flex flex-col gap-2 md:gap-7 justify-center items-center"
             >
               <img
                 src={item.img}
@@ -109,7 +109,7 @@ function Services() {
         </div>
         <div className="bg-transparent md:bg-white  md:pt-40 px-3 sm:px-6 md:px-8 lg:px-24 flex flex-col gap-6 md:gap-16 justify-center items-center">
           <div className="flex flex-col gap-4 justify-center items-center z-[1]">
-            <div className="flex flex-col gap-2 md:gap-5 justify-center items-center">
+            <div className="flex flex-col gap-2 md:gap-7 justify-center items-center">
               <p className="text-[#232323] fontQuicksand text-base md:text-2xl font-semi-bold md:font-medium leading-normal">
                 Services
               </p>
@@ -124,19 +124,19 @@ function Services() {
             </p>
           </div>
           <div className="flex flex-row flex-wrap  md:flex-col gap-0 md:gap-20 justify-center items-center w-full">
-            <div className="flex justify-between flex-wrap  flex-row md:flex-col xl:flex-row gap-0 md:gap-20 md:gap-5 w-full">
+            <div className="flex justify-between flex-wrap  flex-row  xl:flex-row gap-0  md:gap-10 w-full">
               {serviceList1.map((item, index) => (
                 <div
                   key={index}
-                  className="md:w-[407px] w-[10rem] mb-12  md:mb-0 flex flex-col justify-center items-center"
+                  className="md:w-[325px] w-[10rem] mb-12  md:mb-0 flex flex-col justify-center items-center"
                 >
                   <img
-                    className="hidden md:block  w-[195px] h-[200px] md:w-[407px] md:h-[396px] rounded-md"
+                    className="hidden md:block  w-[195px] h-[200px] md:w-[325px] md:h-[396px] rounded-md"
                     src={item.img}
                     alt="_service"
                   />
                   <img
-                    className=" md:hidden w-[195px] h-[200px] md:w-[407px] md:h-[396px] rounded-md"
+                    className=" md:hidden w-[195px] h-[200px] md:w-[325px] md:h-[396px] rounded-md"
                     src={item.img}
                     width={200}
                     alt="_service"
@@ -156,7 +156,7 @@ function Services() {
                       <p
                         className={`
                          text-[#666]
-                         fontQuicksand text-xs md:text-base leading-normal text-center`}
+                         fontQuicksand text-xs md:text-base md:mb-5 leading-normal text-center`}
                         style={textStyle}
                       >
                         {item.description}

@@ -68,18 +68,18 @@ function Products() {
             </div>
           </div>
           <div
-            className="xl:rounded-tr-[20px] flex-wrap md:flex-wrap rounded-bl-[20px] xl:rounded-bl-[0px] rounded-br-[20px] w-full xl:w-[70%] 2xl:w-[65%] bg-[#EDEBE4] flex flex-row gap-2 md:gap-12 lg:gap-4 py-10 md:py-20 xl:py-0 md:px-12   justify-center items-center bg-no-repeat bg-cover"
+            className="xl:rounded-tr-[20px] flex-wrap md:flex-wrap rounded-bl-[20px] xl:rounded-bl-[0px] rounded-br-[20px] w-full xl:w-[70%] 2xl:w-[85%] bg-[#EDEBE4] flex flex-row gap-2  lg:gap-4 py-10 md:py-20 xl:py-0 md:px-12   justify-center items-center bg-no-repeat bg-cover"
             style={{ backgroundImage: `url(${productBg2})` }}
           >
             {products.map((item, index) => (
               <div
                 key={index}
-                className={`h-fit w-[6rem] md:w-fit flex flex-col gap-6 p-4 rounded-[16px] border border-[#CFC4C0] ${
+                className={`h-fit w-[6rem] md:w-[30%] flex flex-col gap-6 p-4 rounded-[16px] border border-[#CFC4C0] ${
                   item.brownBg ? "bg-[#CFC4C0]" : "bg-transparent"
                 } ${item.brownBg ? "shadow-md" : ""}`}
               >
                 <img
-                  className="hidden md:block min-w-[210px] min-h-[242px] rounded-lg"
+                  className="hidden md:flex lg:min-w-[190px] min-h-[242px] rounded-lg"
                   src={item.img}
                   alt="_product"
                 />

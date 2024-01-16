@@ -63,10 +63,12 @@ function ServiceDetail() {
   }
 
   return (
-    <div className="p-10 md:p-40 flex flex-col gap-[20px] items-start">
-      <h2 className="text-base font-normal md:font-bold  md:text-4xl">{selectedService.heading}</h2>
-      <img src={selectedService.img} alt={selectedService.heading} />
-      <p className="text-sm md:text-base">{selectedService.description}</p>
+    <div className="p-10 md:p-40 flex flex-col md:flex-row gap-[20px] bg-[#fefbf0] items-start">
+            <img src={selectedService.img} alt={selectedService.heading} />
+
+<span className="flex flex-col w-100 md:w-[40%]"><p className="text-base font-normal text-[#9BA858]">WE ARE EXPERTS</p>      <h2 className="text-base font-normal md:font-bold my-6  md:text-5xl text-[#FF8300]">{selectedService.heading}</h2>
+      <p className="text-sm md:text-base text-[#ffbf99] my-4">{selectedService.description}</p>
+      <p className="text-base font-normal text-[#9BA858] mt-5">LEARN MORE</p>       </span>
     </div>
   );
 }
