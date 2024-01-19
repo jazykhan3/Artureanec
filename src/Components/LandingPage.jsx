@@ -18,7 +18,7 @@ setTimeout(()=>{    if (storedId) {
       inline: "nearest",
     });
   }
-}},1000)
+}},300)
   }, []);
   return (
     <div>   <Hero />

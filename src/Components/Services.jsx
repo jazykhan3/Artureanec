@@ -8,6 +8,8 @@ import serviceImg2 from "../Assets/service-img-2.png";
 import serviceImg3 from "../Assets/service-img-3.png";
 import serviceImg4 from "../Assets/service-img-4.png";
 import serviceImg6 from "../Assets/service-img-6.png";
+import floralImg from "../Assets/floral.png";
+
 import { useNavigate } from "react-router-dom";
 
 
@@ -87,27 +89,28 @@ function Services() {
           src={serviceBg}
           alt="_bg"
         />
-        <div className="z-1 bg-transparent md:bg-[#785445] flex flex-row gap-4 lg:gap-[200px] justify-center px-3 md:px-24 py-3 md:py-6">
-          {serviceIcon.map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-col gap-2 md:gap-7 justify-center items-center"
-            >
-              <img
-                src={item.img}
-                width={37}
-                className="md:hidden"
-                alt="_service"
-              />
-              <img src={item.img} className="hidden md:block" alt="_service" />
+     <div className={`relative z-10 bg-cover bg-center flex flex-row gap-4 lg:gap-[200px] justify-center px-3 md:px-24 py-3 md:py-6`}>
+  {serviceIcon.map((item, index) => (
+    <div
+      key={index}
+      className="flex flex-col gap-2 md:gap-7 justify-center items-center"
+    >
+      <img
+        src={item.img}
+        width={37}
+        className="md:hidden"
+        alt="_service"
+      />
+      <img src={item.img} className="hidden md:block" alt="_service" />
 
-              <p className="max-w-[150px] text-center text-medium text-white leading-normal fontMont text-sm md:text-[20px]">
-                {item.name}
-              </p>
-            </div>
-          ))}
-        </div>
-        <div className="bg-transparent md:bg-white  md:pt-40 px-3 sm:px-6 md:px-8 lg:px-24 flex flex-col gap-6 md:gap-16 justify-center items-center">
+      <p className="max-w-[150px] text-center text-medium text-white leading-normal fontMont text-sm md:text-[20px]">
+        {item.name}
+      </p>
+    </div>
+  ))}
+</div>
+
+        <div style={{ backgroundImage: `url(${floralImg})` }}  className="bg-transparent md:bg-white  md:pt-40 px-3 sm:px-6 md:px-8 lg:px-24 flex flex-col gap-6 md:gap-16 justify-center items-center">
           <div className="flex flex-col gap-4 justify-center items-center z-[1]">
             <div className="flex flex-col gap-2 md:gap-7 justify-center items-center">
               <p className="text-[#232323] fontQuicksand text-base md:text-2xl font-semi-bold md:font-medium leading-normal">

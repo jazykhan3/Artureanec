@@ -37,7 +37,7 @@ setTimeout(()=>{    if (storedId) {
       inline: "nearest",
     });
   }
-}},1000)
+}},100)
   }, [JSON.stringify(storedId)]);
   const sections = [
     { id: "heroSection", label: "Home" },

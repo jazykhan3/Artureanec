@@ -1,6 +1,6 @@
 // ServiceDetail.jsx
 
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import serviceImg1 from "../Assets/service-img-1.png";
 import serviceImg2 from "../Assets/service-img-2.png";
@@ -17,6 +17,8 @@ function ServiceDetail() {
     // Navigate to home
     navigate("/");
   };
+  useEffect(()=>{      window.scrollTo(0, 0);
+  },[])
   const serviceList = [
     {
       img: serviceImg1,
