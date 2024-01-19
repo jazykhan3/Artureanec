@@ -87,7 +87,7 @@ function Services() {
           src={serviceBg}
           alt="_bg"
         />
-        <div className="bg-transparent md:bg-[#785445] flex flex-row gap-4 lg:gap-[200px] justify-center px-3 md:px-24 py-3 md:py-6">
+        <div className="z-1 bg-transparent md:bg-[#785445] flex flex-row gap-4 lg:gap-[200px] justify-center px-3 md:px-24 py-3 md:py-6">
           {serviceIcon.map((item, index) => (
             <div
               key={index}

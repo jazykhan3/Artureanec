@@ -74,7 +74,7 @@ function Products() {
             {products.map((item, index) => (
               <div
                 key={index}
-                className={`h-fit w-[6rem] md:w-[30%] flex flex-col gap-6 p-4 rounded-[16px] border border-[#CFC4C0] ${
+                className={`h-fit w-[30%] md:w-[30%] flex flex-col gap-6 p-4 rounded-[16px] border border-[#CFC4C0] ${
                   item.brownBg ? "bg-[#CFC4C0]" : "bg-transparent"
                 } ${item.brownBg ? "shadow-md" : ""}`}
               >

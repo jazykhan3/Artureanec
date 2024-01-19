@@ -25,10 +25,10 @@ function InTouch() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     setFormErrors({ ...formErrors, [e.target.name]: "" });
   };
-
+ 
   const sendEmail = () => {
     const userID = "Dnj-vts8njFl-GGau";
-    const templateID = "template_vy3qry6";
+    const templateID = "template_3kyyb2l";
 
     const templateParams = {
       from_name: formData.name,
@@ -38,7 +38,7 @@ function InTouch() {
       message: formData.message,
     };
 
-    return emailjs.send("service_utv8hcv", templateID, templateParams, userID);
+    return emailjs.send("service_h8m6hbq", templateID, templateParams, userID);
   };
 
   const validateForm = () => {
