@@ -3,9 +3,9 @@ import serviceIcon2 from "../Assets/service-icon-2.svg";
 import serviceIcon3 from "../Assets/service-icon-3.svg";
 import serviceIcon4 from "../Assets/service-icon-4.svg";
 import serviceBg from "../Assets/service-bg.svg";
-import serviceImg1 from "../Assets/service-img-1.png";
-import serviceImg2 from "../Assets/service-img-2.png";
-import serviceImg3 from "../Assets/service-img-3.png";
+import serviceImg1 from "../Assets/microneedle.jpg";
+import serviceImg2 from "../Assets/radiofrequency.jpg";
+import serviceImg3 from "../Assets/chemicalpeel.jpg";
 import serviceImg4 from "../Assets/service-img-4.png";
 import serviceImg6 from "../Assets/service-img-6.png";
 import floralImg from "../Assets/floral.png";
@@ -110,7 +110,7 @@ function Services() {
   ))}
 </div>
 
-        <div style={{ backgroundImage: `url(${floralImg})` }}  className="bg-transparent md:bg-white  md:pt-40 px-3 sm:px-6 md:px-8 lg:px-24 flex flex-col gap-6 md:gap-16 justify-center items-center">
+        <div style={{ backgroundImage: `url(${floralImg})` ,backgroundPosition:'center' }}  className="bg-transparent md:bg-white  md:py-40 px-3 sm:px-6 md:px-8 lg:px-24 flex flex-col gap-6 md:gap-16 justify-center items-center">
           <div className="flex flex-col gap-4 justify-center items-center z-[1]">
             <div className="flex flex-col gap-2 md:gap-7 justify-center items-center">
               <p className="text-[#232323] fontQuicksand text-base md:text-2xl font-semi-bold md:font-medium leading-normal">

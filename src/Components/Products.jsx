@@ -30,7 +30,7 @@ function Products() {
   ];
   return (
     <>
-      <div id="productsSection" className="px-4 sm:px-6 md:px-8 lg:px-24 py-16 md:py-40 flex justify-center items-center bg-[#DDDAD2] mt-10 md:mt-32">
+      <div id="productsSection" className="px-4 sm:px-6 md:px-8 lg:px-24 py-16 md:py-40 flex justify-center items-center bg-[#DDDAD2] pt-10 md:pt-32">
         <div className="absolute  flex w-full justify-end mt-[-624px]">
           <img className="" src={bg} alt="_bg" />
         </div>
